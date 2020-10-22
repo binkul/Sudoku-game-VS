@@ -32,5 +32,12 @@ namespace Sudoku.Sudoku.Element
             hashCode = hashCode * -1521134295 + y.GetHashCode();
             return hashCode;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() +
+                "[x: " + x.ToString() +
+                ", y: " + y.ToString() + "]";
+        }
     }
 }
