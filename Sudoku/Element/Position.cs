@@ -9,35 +9,35 @@ namespace Sudoku.Sudoku.Element
 {
     class Position
     {
-        private int x { get; set; }
-        private int y { get; set; }
+        private int X { get; }
+        private int Y { get; }
 
         public Position(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
 
         public override bool Equals(object obj)
         {
             return obj is Position position &&
-                   x == position.x &&
-                   y == position.y;
+                   X == position.X &&
+                   Y == position.Y;
         }
 
         public override int GetHashCode()
         {
             int hashCode = 1502939027;
-            hashCode = hashCode * -1521134295 + x.GetHashCode();
-            hashCode = hashCode * -1521134295 + y.GetHashCode();
+            hashCode = hashCode * -1521134295 + X.GetHashCode();
+            hashCode = hashCode * -1521134295 + Y.GetHashCode();
             return hashCode;
         }
 
         public override string ToString()
         {
             return base.ToString() +
-                "[x: " + x.ToString() +
-                ", y: " + y.ToString() + "]";
+                "[_x: " + X.ToString() +
+                ", y: " + Y.ToString() + "]";
         }
     }
 }
