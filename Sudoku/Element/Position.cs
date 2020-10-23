@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Sudoku.Sudoku.Element
 {
-    class Position
+    class Position : IComparable<Position>
     {
         private int X { get; }
         private int Y { get; }
@@ -36,8 +36,16 @@ namespace Sudoku.Sudoku.Element
         public override string ToString()
         {
             return base.ToString() +
-                "[_x: " + X.ToString() +
+                "[ x: " + X.ToString() +
                 ", y: " + Y.ToString() + "]";
+        }
+
+        public int CompareTo(Position other)
+        {
+            if (X == other.X)
+                return this.Y.CompareTo(other.Y);
+            else
+                return this.X.CompareTo(other.X);
         }
     }
 }
