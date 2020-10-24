@@ -10,9 +10,9 @@ namespace Sudoku.Sudoku.Element
 {
     class Element
     {
-        private int Number { get; set; } = 0;
-        private List<int> Candidates { get; } = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-        private Color FontColor { get; set; } = Color.Black;
+        public int Number { get; set; } = 0;
+        public List<int> Candidates { get; } = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        public Color FontColor { get; set; } = Color.Black;
 
         public Element()
         { }

@@ -9,8 +9,8 @@ namespace Sudoku.Sudoku.Element
 {
     class Position : IComparable<Position>
     {
-        private int X { get; }
-        private int Y { get; }
+        public int X { get; }
+        public int Y { get; }
 
         public Position(int x, int y)
         {
